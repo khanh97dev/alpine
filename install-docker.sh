@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "intatall: docker..."
+echo "install: docker..."
 
 echo "if networking nor run, pls start 'networking'!\n"
 echo "rc-update add networking\n"
