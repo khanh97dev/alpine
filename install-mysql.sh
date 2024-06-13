@@ -21,3 +21,8 @@ fi
 rc-update add mariadb
 
 rc-service mariadb restart
+
+# grant root to global network
+mysql -u root -proot -e "CREATE USER 'root'@'%' IDENTIFIED BY 'root'"
+mysql -u root -proot -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;"
+mysql -u root -proot -e "FLUSH PRIVILEGES;"
