@@ -3,7 +3,7 @@
 echo 'install: openrc ...'
 
 apk add --no-cache openrc
-if ! -d /run/openrc
+if [ ! -d /run/openrc ]
 then
   mkdir -p /run/openrc
 fi
